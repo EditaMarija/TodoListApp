@@ -4,7 +4,6 @@ using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-
 namespace TodoListApp
 {
     class TodoListViewModel
@@ -13,9 +12,9 @@ namespace TodoListApp
         public TodoListViewModel()
         {
             TodoItems = new ObservableCollection<TodoItem>();
-            TodoItems.Add(new TodoItem("walk the dog", true));
-            TodoItems.Add(new TodoItem("wash dishes", false));
-            TodoItems.Add(new TodoItem("get more coffee", false));
+            TodoItems.Add(new TodoItem("Learn more about backend", true));
+            TodoItems.Add(new TodoItem("Meet a friend", false));
+            TodoItems.Add(new TodoItem("Practise API", false));
         }
 
         public ICommand AddTodoCommand => new Command(AddTodoItem);
@@ -25,7 +24,7 @@ namespace TodoListApp
             TodoItems.Add(new TodoItem(NewTodoInputValue, false));
             //NewTodoInputValue = string.Empty;
             NewTodoInputValue = null;
-            //NewTodoInputValue = "TEST";       
+                
         }
 
         public ICommand RemoveTodoCommand => new Command(RemoveTodoItem);
