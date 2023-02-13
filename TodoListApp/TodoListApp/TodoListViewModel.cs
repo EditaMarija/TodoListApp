@@ -22,7 +22,7 @@ namespace TodoListApp
         public void AddTodoItem()
         {  
             TodoItems.Add(new TodoItem(NewTodoInputValue, false));
-            //NewTodoInputValue = string.Empty;
+            NewTodoInputValue = string.Empty;
             NewTodoInputValue = null;
                 
         }
